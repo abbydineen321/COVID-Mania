@@ -14,4 +14,11 @@ function wrong() {
 
 function validate(text, answer) {}
 
-function spellcheck(txt, answer) {}
+function spellcheck(txt, answer) {
+    this.txt = txt;
+    this.txt = {};
+    txt.forEach(item => {
+        !this.txt[item] && (this.txt[item] = 0);
+        this.txt[item]++;
+    });
+}
