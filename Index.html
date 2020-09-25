@@ -1,17 +1,22 @@
 <!DOCTYPE html>
 <html>
-<body>
-<link href="Covid-Mania.css" rel="stylesheet">
-<p>
-  Hi There! Welcome to COVID – Mania!
-
-  My name is Vrans, I am an alien from outer space. Today, I want you to help me learn about COVID-19!
-
-  What is your name?
-
-  Come along with me, lets see what we can find!
-
-</p>
-  
-</body>
+    <body>
+        <link href="Covid-Mania.css" rel="stylesheet" />
+        <p>
+            Hi There! Welcome to COVID – Mania! My name is Vrans, I am an alien from outer space. Today, I
+            want you to help me learn about COVID-19!
+        </p>
+        <input type="text" name="name" id="name" />
+        <button onclick="nameEntered()">sumbit</button>
+        <script>
+            function nameEntered() {
+                var customerName = getElementById("name").value;
+                if (customerName != null) {
+                    document.getElementById("welcome").innerHTML =
+                        "Hello" + customerName + "! How are you today?";
+                }
+            }
+        </script>
+        <p id="welcome"></p>
+    </body>
 </html>

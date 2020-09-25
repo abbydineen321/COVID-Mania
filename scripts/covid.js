@@ -11,3 +11,7 @@ function wrong() {
     score = score - 1;
     document.getElementById("counter").value = score;
 }
+
+function validate(text, answer) {}
+
+function spellcheck(txt, answer) {}
