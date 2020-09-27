@@ -1,23 +1,38 @@
 <!DOCTYPE html>
 <html>
+    <head>
+        <title>Start page</title>
+        <style>
+            .hidden {
+                display: none;
+            }
+
+            .show {
+                display: block;
+            }
+        </style>
+    </head>
     <body>
         <link href="Covid-Mania.css" rel="stylesheet" />
         <p>
-            Hi There! Welcome to COVID – Mania! My name is Vrans, I am an alien from outer space. Today, I
-            want you to help me learn about COVID-19!
+            Hi There! Welcome to COVID – Mania! My name is Vrans, I am an alien from outer space. Today, I want you to help me learn about COVID-19!
         </p>
-        <input type="text" name="name" id="name" />
-        <button onclick="nameEntered()">sumbit</button>
+        <div>
+            <p>Tell me your name</p>
+            <input type="text" name="name" id="name" placeholder="Type your name here!" onchange="nameEntered()" />
+        </div>
         <script>
             function nameEntered() {
-                var userName = getElementById("name").value;
+                var userName = document.getElementById("name").value;
+                var message = document.getElementById("welcome");
                 if (userName != null) {
-                    document.getElementById("welcome").innerHTML =
-                        "Hello" + userName + "! How are you today?";
+                    message.innerHTML = "Hello " + userName + "! Hope you are having a great day! Lets go for a quick lesson";
+                    document.getElementById("nxt-btn").className = "show";
                 }
             }
         </script>
+
         <p id="welcome"></p>
-        <a href=Activity1.html><button type="button">Go to activity 1</button> </a>
+        <a id="nxt-btn" class="hidden" href="Activity1.html"><button type="button">Go to activity 1</button> </a>
     </body>
 </html>
