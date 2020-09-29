@@ -22,3 +22,7 @@ function spellcheck(txt, answer) {
         this.txt[item]++;
     });
 }
+
+$(function() {
+    $('body').removeClass('fade-out');
+});
