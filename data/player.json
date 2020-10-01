@@ -1,0 +1,12 @@
+{
+    "players": [
+        {
+            "name": "Joe",
+            "score": 2
+        },
+        {
+            "name": "Biden",
+            "score": 0
+        }
+    ]
+}

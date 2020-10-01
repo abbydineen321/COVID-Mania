@@ -3,13 +3,30 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      
+
         <title>Document</title>
-        <script src="scripts/sound.js"></script>
-        <script src="scripts/covid.jss"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+        <script>
+            $.getJSON("data/player.json", function (data) {
+                var name, score, info;
+
+                $(data.players).each(function (index, value) {
+                    if (value.name == "Joe") {
+                        name = value.name;
+                        score = value.score;
+                    }
+                });
+
+                info = "Name: " + name + "\nScore: " + score;
+
+                $(".info").append(info);
+            });
+        </script>
     </head>
     <body>
         <h1>This is activity 1</h1>
+        <h3 class="info"></h3>
         <p>
             Meet Margaret. She wants to leave the house, but in Melbourne, there is stage 4 restrictions. What are the FOUR reasons you can leave the
             house? Type your answer below:
