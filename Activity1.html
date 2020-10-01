@@ -11,6 +11,7 @@
             $.getJSON("data/player.json", function (data) {
                 var name, score, info;
 
+                // calling JSON object and finding the name of player and its score
                 $(data.players).each(function (index, value) {
                     if (value.name == "Joe") {
                         name = value.name;
