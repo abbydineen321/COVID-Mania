@@ -26,6 +26,8 @@ $(document).ready(function () {
         ping();
     });
 
+    $(".submit-btn, ");
+
     function ping() {
         var sound = new Audio();
         sound.src = "audio/ping.mp3";
@@ -33,6 +35,16 @@ $(document).ready(function () {
     }
 
     function validate(text, answer) {}
+
+    function booleanText(text) {
+        if (text == "yes") {
+            return true;
+        } else if (text == "no") {
+            return false;
+        } else {
+            return 0;
+        }
+    }
 
     function spellcheck(txt, answer) {
         textArray = txt.split("");
