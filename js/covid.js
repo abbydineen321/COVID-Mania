@@ -22,6 +22,8 @@ $(document).ready(function () {
         var answerType;
     });
 
+    $(".submit-btn2").click(function () {});
+
     $(".submit-btn6").on("click", function () {
         var input = $("#answer").val();
         var checks = booleanText(input);
