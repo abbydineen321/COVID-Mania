@@ -9,35 +9,29 @@ $(document).ready(function () {
                 score = value.score;
             }
         });
+
         // prep the values
-        info = "Name: " + name + "\nScore: " + score;
+        info = "Name: " + name + "<br>Score: " + score;
 
         $(".info").append(info);
     });
 
-    function correct() {
-        number = document.getElementById("counter").value;
-        score = parseInt(number);
-        score = score + 1;
-        document.getElementById("counter").value = score;
-    }
-
-    function wrong() {
-        number = document.getElementById("counter").value;
-        score = parseInt(number);
-        score = score - 1;
-        document.getElementById("counter").value = score;
-    }
+    $(".submit-btn").on("click", function () {
+        var input = $("#answer").value();
+        var answers = validate(input, answer);
+    });
 
     function validate(text, answer) {}
 
     function spellcheck(txt, answer) {
-        this.txt = txt;
-        this.txt = {};
-        txt.forEach(item => {
-            !this.txt[item] && (this.txt[item] = 0);
-            this.txt[item]++;
+        textArray = txt.split("");
+        answerArray = answer.split("");
+        textArray.forEach(i => {
+            if (textArray[i] != answerArray[i]) {
+                return false;
+            }
         });
+        return true;
     }
 
     $(function () {
