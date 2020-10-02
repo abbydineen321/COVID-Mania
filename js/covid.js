@@ -34,16 +34,21 @@ $(document).ready(function () {
             $(".feedback").html("You are wrong!!");
         } else if (checks == false) {
             $(".feedback").html("You are right!!");
+            ping();
         } else {
-            $(".feedback").html("tell me something right!");
+            $(".feedback").html("Tell me yes or no only!");
         }
     });
 
     $(".ping").click(function () {
+        ping();
+    });
+
+    function ping() {
         var ping = new Audio();
         ping.src = "audio/ping.mp3";
         ping.play();
-    });
+    }
 
     function validate(text, answer) {}
 
