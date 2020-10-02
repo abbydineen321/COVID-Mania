@@ -31,11 +31,11 @@ $(document).ready(function () {
         var input = $("#answer").val();
         var checks = booleanText(input);
         if (checks == true) {
-            console.log("true");
+            $(".feedback").html("You are wrong!!");
         } else if (checks == false) {
-            console.log("false");
+            $(".feedback").html("You are right!!");
         } else {
-            console.log("Nothing");
+            $(".feedback").html("tell me something right!");
         }
     });
 
