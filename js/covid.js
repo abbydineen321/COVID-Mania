@@ -16,17 +16,27 @@ $(document).ready(function () {
         $(".info").append(info);
     });
 
-    $(".submit-btn").on("click", function () {
+    $(".submit-btn1").on("click", function () {
         var input = $("#answer").val();
         var answers = validate(input, answer);
         var answerType;
     });
 
+    $(".submit-btn6").on("click", function () {
+        var input = $("#answer").val();
+        var checks = booleanText(input);
+        if (checks == true) {
+            console.log("true");
+        } else if (checks == false) {
+            console.log("false");
+        } else {
+            console.log("Nothing");
+        }
+    });
+
     $(".ping").click(function () {
         ping();
     });
-
-    $(".submit-btn, ");
 
     function ping() {
         var sound = new Audio();
@@ -42,7 +52,7 @@ $(document).ready(function () {
         } else if (text == "no") {
             return false;
         } else {
-            return 0;
+            return -1;
         }
     }
 
