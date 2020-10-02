@@ -6,24 +6,7 @@
 
         <title>Document</title>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
-        <script>
-            $.getJSON("data/player.json", function (data) {
-                var name, score, info;
-
-                // calling JSON object and finding the name of player and its score
-                $(data.players).each(function (index, value) {
-                    if (value.name == "Joe") {
-                        name = value.name;
-                        score = value.score;
-                    }
-                });
-                // prep the values
-                info = "Name: " + name + "\nScore: " + score;
-
-                $(".info").append(info);
-            });
-        </script>
+        <script src="js/covid.js"></script>
     </head>
     <body>
         <h1>This is activity 1</h1>
