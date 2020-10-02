@@ -33,7 +33,7 @@ $(document).ready(function () {
         if (checks == true) {
             $(".feedback").html("You are wrong!!");
         } else if (checks == false) {
-            $(".feedback").html("You are right!!");
+            $(".feedback").html("You are correct!!");
             ping();
         } else {
             $(".feedback").html("Tell me yes or no only!");
