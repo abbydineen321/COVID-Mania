@@ -8,6 +8,34 @@ body.fade-out {
     transition: none;
 }
 
+* {
+    margin-left: 10px;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #5a9adf;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    color: aliceblue;
+}
+
+p {
+    width: 50%;
+    padding: 10px;
+}
+
+input {
+    padding: 5px;
+    background-color: white;
+}
+
+button {
+    padding: 3px;
+    background-color: orange;
+    color: black;
+}
+
 .hidden {
     display: none;
 }
