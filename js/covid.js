@@ -16,24 +16,21 @@ $(document).ready(function () {
         $(".info").append(info);
     });
 
-    $(".submit-btn").click(function () {
+    $(".submit-btn").on("click", function () {
         var input = $("#answer").val();
         var answers = validate(input, answer);
         var answerType;
-        var audio = {};
-        audio["ping"] = new Audio();
-        audio["ping"].src="audio/ping.mp3";
-        audio["ping"].addEventListener('load', function () {
-            audio["ping"].play();
-        })
-         
     });
 
     $(".ping").click(function () {
-        var ping = new Audio();
-        ping.src = "audio/ping.mp3";
-        ping.play();
+        ping();
     });
+
+    function ping() {
+        var sound = new Audio();
+        sound.src = "audio/ping.mp3";
+        sound.play();
+    }
 
     function validate(text, answer) {}
 
