@@ -17,8 +17,9 @@ $(document).ready(function () {
     });
 
     $(".submit-btn").on("click", function () {
-        var input = $("#answer").value();
+        var input = $("#answer").val();
         var answers = validate(input, answer);
+        var answerType;
     });
 
     function validate(text, answer) {}
