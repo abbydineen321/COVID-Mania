@@ -16,10 +16,17 @@ $(document).ready(function () {
         $(".info").append(info);
     });
 
-    $(".submit-btn").on("click", function () {
+    $(".submit-btn").click(function () {
         var input = $("#answer").val();
         var answers = validate(input, answer);
         var answerType;
+        playPing();
+    });
+
+    $(".ping").click(function () {
+        var ping = new Audio();
+        ping.src = "audio/ping.mp3";
+        ping.play();
     });
 
     function validate(text, answer) {}
