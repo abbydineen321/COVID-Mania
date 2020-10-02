@@ -16,14 +16,17 @@ $(document).ready(function () {
         $(".info").append(info);
     });
 
+    // Activity 1 button event
     $(".submit-btn1").click(function () {
         var input = $("#answer").val();
         var answers = validate(input, answer);
         var answerType;
     });
 
+    // Activity 2 button event
     $(".submit-btn2").click(function () {});
 
+    // Activity 6 button event
     $(".submit-btn6").on("click", function () {
         var input = $("#answer").val();
         var checks = booleanText(input);
@@ -41,12 +44,6 @@ $(document).ready(function () {
         ping.src = "audio/ping.mp3";
         ping.play();
     });
-
-    function ping() {
-        var sound = new Audio();
-        sound.src = "audio/ping.mp3";
-        sound.play();
-    }
 
     function validate(text, answer) {}
 
