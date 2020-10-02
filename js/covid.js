@@ -16,7 +16,7 @@ $(document).ready(function () {
         $(".info").append(info);
     });
 
-    $(".submit-btn1").on("click", function () {
+    $(".submit-btn1").click(function () {
         var input = $("#answer").val();
         var answers = validate(input, answer);
         var answerType;
@@ -35,7 +35,9 @@ $(document).ready(function () {
     });
 
     $(".ping").click(function () {
-        ping();
+        var ping = new Audio();
+        ping.src = "audio/ping.mp3";
+        ping.play();
     });
 
     function ping() {
