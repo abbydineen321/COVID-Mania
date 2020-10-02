@@ -20,12 +20,7 @@ $(document).ready(function () {
         var input = $("#answer").val();
         var answers = validate(input, answer);
         var answerType;
-        var audio = {};
-        audio["ping"] = new Audio();
-        audio["ping"].src="audio/ping.mp3";
-        audio["ping"].addEventListener('load', function () {
-            audio["ping"].play();
-        })
+        
          
     });
 
