@@ -44,6 +44,7 @@ $(document).ready(function () {
         ping();
     });
 
+    // funcitons based on javascript
     function ping() {
         var ping = new Audio();
         ping.src = "audio/ping.mp3";
