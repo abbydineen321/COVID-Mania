@@ -1,6 +1,23 @@
 body {
   opacity: 1;
   transition: 1s opacity;
+  text-align: center;
+  margin: auto;
+}
+
+body.day {
+  background-image: url("../assets/daybg.JPG");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+body.store {
+  background-image: url("../assets/daybg.JPG");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+body.night {
   background-image: url("../assets/daybg.JPG");
   background-size: cover;
   background-repeat: no-repeat;
