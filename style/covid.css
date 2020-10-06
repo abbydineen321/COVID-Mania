@@ -12,13 +12,13 @@ body.day {
 }
 
 body.store {
-  background-image: url("../assets/daybg.JPG");
+  background-image: url("../assets/storebg.JPG");
   background-size: cover;
   background-repeat: no-repeat;
 }
 
 body.night {
-  background-image: url("../assets/daybg.JPG");
+  background-image: url("../assets/nightbg.JPG");
   background-size: cover;
   background-repeat: no-repeat;
 }
