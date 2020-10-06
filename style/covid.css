@@ -1,48 +1,59 @@
 body {
-    opacity: 1;
-    transition: 1s opacity;
+  opacity: 1;
+  transition: 1s opacity;
 }
 
 body.fade-out {
-    opacity: 0;
-    transition: none;
+  opacity: 0;
+  transition: none;
 }
 
 * {
-    margin-left: 10px;
-    padding: 0;
-    box-sizing: border-box;
-    background-color: #5a9adf;
-    font-family: Arial, Helvetica, sans-serif;
+  margin-left: 10px;
+  padding: 0;
+  box-sizing: border-box;
+
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 body {
-    color: aliceblue;
+  color: aliceblue;
+  text-align: center;
 }
 
 p {
-    text-align: center;
-    width: 50%;
-    padding: 70px;
+  text-align: center;
+  width: 50%;
+  padding: 70px;
 }
 
 input {
-    padding: 5px;
-    background-color: white;
+  padding: 5px;
+  background-color: white;
 }
 
 button {
-    padding: 3px;
-    background-color: orange;
-    color: black;
+  padding: 3px;
+  background-color: orange;
+  color: black;
 }
 
 .hidden {
-    display: none;
+  display: none;
 }
 
 .show {
-    display: block;
+  display: block;
+}
+
+.main {
+  margin: auto;
+  margin-bottom: 30%;
+  text-align: center;
+  width: 60%;
+  background-image: url("../assets/daybg.JPG");
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 img:hover {
@@ -54,20 +65,42 @@ img:hover {
 }
 
 @keyframes shake {
-  0% { transform: translate(1px, 1px) rotate(0deg); }
-  10% { transform: translate(-1px, -2px) rotate(-1deg); }
-  20% { transform: translate(-3px, 0px) rotate(1deg); }
-  30% { transform: translate(3px, 2px) rotate(0deg); }
-  40% { transform: translate(1px, -1px) rotate(1deg); }
-  50% { transform: translate(-1px, 2px) rotate(-1deg); }
-  60% { transform: translate(-3px, 1px) rotate(0deg); }
-  70% { transform: translate(3px, 1px) rotate(-1deg); }
-  80% { transform: translate(-1px, -1px) rotate(1deg); }
-  90% { transform: translate(1px, 2px) rotate(0deg); }
-  100% { transform: translate(1px, -2px) rotate(-1deg); }
+  0% {
+    transform: translate(1px, 1px) rotate(0deg);
+  }
+  10% {
+    transform: translate(-1px, -2px) rotate(-1deg);
+  }
+  20% {
+    transform: translate(-3px, 0px) rotate(1deg);
+  }
+  30% {
+    transform: translate(3px, 2px) rotate(0deg);
+  }
+  40% {
+    transform: translate(1px, -1px) rotate(1deg);
+  }
+  50% {
+    transform: translate(-1px, 2px) rotate(-1deg);
+  }
+  60% {
+    transform: translate(-3px, 1px) rotate(0deg);
+  }
+  70% {
+    transform: translate(3px, 1px) rotate(-1deg);
+  }
+  80% {
+    transform: translate(-1px, -1px) rotate(1deg);
+  }
+  90% {
+    transform: translate(1px, 2px) rotate(0deg);
+  }
+  100% {
+    transform: translate(1px, -2px) rotate(-1deg);
+  }
 }
 
 h2 {
-    text-align: center;
-    font-style: italic;
+  text-align: center;
+  font-style: italic;
 }
