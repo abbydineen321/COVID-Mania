@@ -1,8 +1,9 @@
 body {
-  opacity: 1;
-  transition: 1s opacity;
   text-align: center;
   margin: auto;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  color: black;
+  text-align: center;
 }
 
 body.day {
@@ -21,6 +22,7 @@ body.night {
   background-image: url("../assets/nightbg.JPG");
   background-size: cover;
   background-repeat: no-repeat;
+  color: white;
 }
 
 body.fade-out {
@@ -32,13 +34,6 @@ body.fade-out {
   margin-left: 10px;
   padding: 0;
   box-sizing: border-box;
-
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-body {
-  color: aliceblue;
-  text-align: center;
 }
 
 p {
