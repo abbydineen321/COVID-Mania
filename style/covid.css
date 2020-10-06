@@ -1,6 +1,9 @@
 body {
   opacity: 1;
   transition: 1s opacity;
+  background-image: url("../assets/daybg.JPG");
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 body.fade-out {
@@ -49,11 +52,12 @@ button {
 .main {
   margin: auto;
   margin-bottom: 30%;
+  height: 600px;
   text-align: center;
   width: 60%;
-  background-image: url("../assets/daybg.JPG");
-  background-size: cover;
-  background-repeat: no-repeat;
+
+  padding: 5%;
+  overflow: hidden;
 }
 
 img:hover {
