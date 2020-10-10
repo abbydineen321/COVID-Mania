@@ -1,125 +1,153 @@
-body {
-  text-align: center;
-  margin: auto;
-  font-family: "Comic Sans MS", cursive, sans-serif;
-  color: black;
-  text-align: center;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
+body {
+    text-align: center;
+    margin: auto;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    color: black;
+}
+
+/* Background image */
 body.day {
-  background-image: url("../assets/daybg.JPG");
-  background-size: cover;
-  background-repeat: no-repeat;
+    background-image: url("../assets/daybg.JPG");
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 body.store {
-  background-image: url("../assets/storebg.JPG");
-  background-size: cover;
-  background-repeat: no-repeat;
+    background-image: url("../assets/storebg.JPG");
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 body.night {
-  background-image: url("../assets/nightbg.JPG");
-  background-size: cover;
-  background-repeat: no-repeat;
-  color: white;
+    background-image: url("../assets/nightbg.JPG");
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
 }
+/* content */
 
 body.fade-out {
-  opacity: 0;
-  transition: none;
-}
-
-* {
-  margin-left: 10px;
-  padding: 0;
-  box-sizing: border-box;
+    opacity: 0;
+    transition: none;
 }
 
 p {
-  text-align: center;
-  width: 50%;
-  padding: 70px;
+    text-align: center;
+    width: 50%;
 }
 
 input {
-  padding: 5px;
-  background-color: white;
+    padding: 5px 10px 5px;
+    background-color: white;
+    border-radius: 5px;
+}
+.game {
+    margin-top: 100px;
+    display: flex;
+    justify-content: space-between;
+    height: 50%;
 }
 
+.game-section {
+    background-color: aliceblue;
+    width: 40%;
+    height: 400px;
+    padding: 20px;
+    border-radius: 10px;
+    margin-left: auto;
+    margin-right: 10%;
+}
+
+.info-section {
+    display: flex;
+    background-color: aliceblue;
+    width: 20%;
+    height: 50%;
+    padding: 20px;
+    border-radius: 10px;
+    margin-right: auto;
+}
 button {
-  padding: 3px;
-  background-color: orange;
-  color: black;
+    padding: 5px 10px 5px;
+    background-color: orange;
+    color: black;
+    border-radius: 5px;
 }
 
 .hidden {
-  display: none;
+    display: none;
 }
 
 .show {
-  display: block;
+    display: block;
 }
 
 .main {
-  margin: auto;
-  margin-bottom: 30%;
-  height: 600px;
-  text-align: center;
-  width: 60%;
+    margin: auto;
+    margin-bottom: 30%;
+    height: 600px;
+    text-align: center;
+    width: 60%;
 
-  padding: 5%;
-  overflow: hidden;
+    padding: 5%;
+    overflow: hidden;
 }
 
+/* animation */
 img:hover {
-  /* Start the shake animation and make the animation last for 0.5 seconds */
-  animation: shake 0.5s;
+    /* Start the shake animation and make the animation last for 0.5 seconds */
+    animation: shake 0.5s;
 
-  /* When the animation is finished, start again */
-  animation-iteration-count: infinite;
+    /* When the animation is finished, start again */
+    animation-iteration-count: infinite;
 }
 
 @keyframes shake {
-  0% {
-    transform: translate(1px, 1px) rotate(0deg);
-  }
-  10% {
-    transform: translate(-1px, -2px) rotate(-1deg);
-  }
-  20% {
-    transform: translate(-3px, 0px) rotate(1deg);
-  }
-  30% {
-    transform: translate(3px, 2px) rotate(0deg);
-  }
-  40% {
-    transform: translate(1px, -1px) rotate(1deg);
-  }
-  50% {
-    transform: translate(-1px, 2px) rotate(-1deg);
-  }
-  60% {
-    transform: translate(-3px, 1px) rotate(0deg);
-  }
-  70% {
-    transform: translate(3px, 1px) rotate(-1deg);
-  }
-  80% {
-    transform: translate(-1px, -1px) rotate(1deg);
-  }
-  90% {
-    transform: translate(1px, 2px) rotate(0deg);
-  }
-  100% {
-    transform: translate(1px, -2px) rotate(-1deg);
-  }
+    0% {
+        transform: translate(1px, 1px) rotate(0deg);
+    }
+    10% {
+        transform: translate(-1px, -2px) rotate(-1deg);
+    }
+    20% {
+        transform: translate(-3px, 0px) rotate(1deg);
+    }
+    30% {
+        transform: translate(3px, 2px) rotate(0deg);
+    }
+    40% {
+        transform: translate(1px, -1px) rotate(1deg);
+    }
+    50% {
+        transform: translate(-1px, 2px) rotate(-1deg);
+    }
+    60% {
+        transform: translate(-3px, 1px) rotate(0deg);
+    }
+    70% {
+        transform: translate(3px, 1px) rotate(-1deg);
+    }
+    80% {
+        transform: translate(-1px, -1px) rotate(1deg);
+    }
+    90% {
+        transform: translate(1px, 2px) rotate(0deg);
+    }
+    100% {
+        transform: translate(1px, -2px) rotate(-1deg);
+    }
 }
 
 h2 {
-  text-align: center;
-  font-style: italic;
-  text-decoration: inherit;
-  text-shadow: 2.5px 2.5px black;
-  font-size: 50px;
+    text-align: center;
+    font-style: italic;
+    text-decoration: inherit;
+    text-shadow: 2.5px 2.5px black;
+    font-size: 50px;
 }

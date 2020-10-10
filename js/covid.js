@@ -13,7 +13,7 @@ $(document).ready(function () {
         // prep the values
         info = "Name: " + name + "<br>Score: " + score;
 
-        $(".info").append(info);
+        $(".score").append(info);
     });
 
     // Activity 1 button event
