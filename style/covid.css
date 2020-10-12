@@ -16,18 +16,21 @@ body.day {
     background-image: url("../assets/daybg.JPG");
     background-size: cover;
     background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 body.store {
     background-image: url("../assets/storebg.JPG");
     background-size: cover;
     background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 body.night {
     background-image: url("../assets/nightbg.JPG");
     background-size: cover;
     background-repeat: no-repeat;
+    background-attachment: fixed;
     color: white;
 }
 /* content */
@@ -55,9 +58,14 @@ body.fade-out {
 }
 
 input {
-    padding: 5px 10px 5px;
-    background-color: white;
-    border-radius: 5px;
+    text-align: center;
+    font-size: large;
+    padding: 20px;
+    border: none;
+    background: none;
+    border-bottom: black 2px solid;
+    width: fit-content;
+    height: fit-content;
 }
 .game {
     margin-top: 100px;
@@ -69,7 +77,7 @@ input {
 .welcome-section {
     background-color: aliceblue;
     width: 40%;
-    height: 400px;
+    height: fit-content;
     padding: 20px;
     border-radius: 10px;
     margin-left: auto;
