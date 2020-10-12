@@ -87,7 +87,7 @@ input {
 .game-section {
     background-color: aliceblue;
     width: 40%;
-    height: 400px;
+    height: fit-content;
     padding: 20px;
     border-radius: 10px;
     margin-left: auto;
