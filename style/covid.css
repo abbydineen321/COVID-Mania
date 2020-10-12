@@ -32,14 +32,26 @@ body.night {
 }
 /* content */
 
+h2 {
+    text-align: center;
+    font-style: italic;
+    text-decoration: inherit;
+    text-shadow: 2.5px 2.5px black;
+    font-size: 50px;
+}
+
+.title {
+    margin-top: 1vh;
+    margin-bottom: 3vh;
+}
+
 body.fade-out {
     opacity: 0;
     transition: none;
 }
 
-p {
-    text-align: center;
-    width: 50%;
+.cartoon {
+    margin: 100px;
 }
 
 input {
@@ -52,6 +64,16 @@ input {
     display: flex;
     justify-content: space-between;
     height: 50%;
+}
+
+.welcome-section {
+    background-color: aliceblue;
+    width: 40%;
+    height: 400px;
+    padding: 20px;
+    border-radius: 10px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .game-section {
@@ -102,7 +124,7 @@ button {
 /* animation */
 img:hover {
     /* Start the shake animation and make the animation last for 0.5 seconds */
-    animation: shake 0.5s;
+    animation: shake 0.8s;
 
     /* When the animation is finished, start again */
     animation-iteration-count: infinite;
@@ -142,12 +164,4 @@ img:hover {
     100% {
         transform: translate(1px, -2px) rotate(-1deg);
     }
-}
-
-h2 {
-    text-align: center;
-    font-style: italic;
-    text-decoration: inherit;
-    text-shadow: 2.5px 2.5px black;
-    font-size: 50px;
 }
