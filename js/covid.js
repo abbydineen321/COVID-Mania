@@ -82,13 +82,18 @@ $(document).ready(function () {
         $("body").removeClass("fade-out");
     });
 });
-
+ 
 function nameEntered() {
     var userName = document.getElementById("name").value;
+    getName(userName);
     var message = document.getElementById("welcome");
     if (userName != null) {
         message.innerHTML = "Hello " + userName + "! Hope you are having a great day! Let's go onto the next activity!";
         document.getElementById("nxt-btn").className = "show";
         document.getElementById();
     }
+}
+
+function getName(userName) {
+    user = userName;
 }
