@@ -1,4 +1,7 @@
 $(document).ready(function () {
+
+    
+
     $.getJSON("data/player.json", function (data) {
         var name, score;
 
@@ -92,8 +95,26 @@ function nameEntered() {
         document.getElementById("nxt-btn").className = "show";
         document.getElementById();
     }
+    return userName;
 }
 
 function getName(userName) {
-    user = userName;
+    
+    return userName;
 }
+
+function displayName() {
+    var name = getName(); 
+    //score;
+
+    // calling JSON object and finding the name of player and its score
+    $(data.players).each(function (index, value) {
+        name = value.name;
+        score = value.score;
+    });
+
+    // prep the values
+    info = "Name: " + name + "<br>Score: " + score;
+
+    $(".score").append(info);
+});
