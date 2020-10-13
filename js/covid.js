@@ -117,4 +117,4 @@ function displayName() {
     info = "Name: " + name + "<br>Score: " + score;
 
     $(".score").append(info);
-});
+}
