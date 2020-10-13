@@ -14,12 +14,11 @@ $(document).ready(function () {
         $(".score").append(info);
     });
 
-    // //index page name button
-    // $(".submit-btnIndex").click(function () {
-    //     var input = $("#name").val();
+    //index page name button
+    $(".submit-btnIndex").click(function () {
+        var input = tempName;
 
-
-    // });
+    });
 
     // Activity 1 button event
     $(".submit-btn1").click(function () {
