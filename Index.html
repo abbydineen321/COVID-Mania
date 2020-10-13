@@ -21,8 +21,11 @@
                     COVID-19!
                 </p>
                 <div>
+                    <form>
                     <p>Tell me your name</p>
-                    <input type="text" name="name" id="name" placeholder="Type your name here!" onchange="nameEntered()" />
+                    <input type="text" name="name" id="name" placeholder="Type your name here!" />
+                    <button class="ping" type="submit" onsubmit="nameEntered()">Enter</button>
+                    </form>
                 </div>
                 <div class="cartoon">
                     <img src="assets/sprite.PNG" alt="Vrans the Alien" style="width: 100px; height: 100px" />
