@@ -1,13 +1,11 @@
 $(document).ready(function () {
     $.getJSON("data/player.json", function (data) {
-        var name, score, info;
+        var name, score;
 
         // calling JSON object and finding the name of player and its score
         $(data.players).each(function (index, value) {
-            if (value.name == "Joe") {
-                name = value.name;
-                score = value.score;
-            }
+            name = value.name;
+            score = value.score;
         });
 
         // prep the values
@@ -15,6 +13,13 @@ $(document).ready(function () {
 
         $(".score").append(info);
     });
+
+    // //index page name button
+    // $(".submit-btnIndex").click(function () {
+    //     var input = $("#name").val();
+
+
+    // });
 
     // Activity 1 button event
     $(".submit-btn1").click(function () {
@@ -24,7 +29,7 @@ $(document).ready(function () {
     });
 
     // Activity 2 button event
-    $(".submit-btn2").click(function () {});
+    $(".submit-btn2").click(function () { });
 
     // Activity 6 button event
     $(".submit-btn6").on("click", function () {
@@ -51,7 +56,7 @@ $(document).ready(function () {
         ping.play();
     }
 
-    function validate(text, answer) {}
+    function validate(text, answer) { }
 
     function booleanText(text) {
         if (text == "yes") {
