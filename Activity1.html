@@ -1,56 +1,58 @@
 <!DOCTYPE html>
 
 <html lang="en">
+   <head>
+      <title>COVID - Mania: Activity 1</title>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
-    <title>COVID - Mania: Activity 1</title>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <script src="js/covid.js"></script>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="js/covid.js"></script>
+      <link rel="stylesheet" href="style/covid.css" />
+   </head>
 
-    <link rel="stylesheet" href="style/covid.css" />
-
-</head>
-
-<body class="day">
-    <h2 class="title">COVID - Mania!</h2>
-    <div class="game">
-        <div class="game-section">
+   <body class="day">
+      <h2 class="title">COVID - Mania!</h2>
+      <div class="game">
+         <div class="game-section">
             <p>
-                Meet Margaret. She wants to leave the house, but in Melbourne, there is stage 4 restrictions. What are
-                the FOUR reasons you can
-                leave the house? Type your answer below:
+               Meet Margaret. She wants to leave the house, but in Melbourne, there is stage 4 restrictions. What are the FOUR reasons you can leave
+               the house? Type your answer below:
             </p>
 
             <ul>
-                <li class="answer1">Groceries</li>
-                <li class="answer2">Walk</li>
-                <li class="answer3">Work</li>
-                <li class="answer4">Doctors</li>
+               <li class="answer1">Groceries</li>
+               <li class="answer2">Walk</li>
+               <li class="answer3">Work</li>
+               <li class="answer4">Doctors</li>
             </ul>
             <input type="text" name="answer" id="answer" />
-            <button class="submit-btn1 btn ping">submit</button>
-            <br>
-            <br>
+            <button class="submit-btn1 btn">submit</button>
+            <br />
+            <br />
             <p>
-                <a href="Activity2.html"><button type="button">Go to activity 2</button></a>
-                <a href="Index.html"> <button type="button">Return to Home Screen</button></a>
+               <a href="Activity2.html"><button type="button">Go to activity 2</button></a>
+               <a href="Index.html"> <button type="button">Return to Home Screen</button></a>
             </p>
-        </div>
-        <div class="info-section">
+         </div>
+         <div class="info-section">
             <b>Name: </b>
             <div id="name">
-                <script>displayName()</script><br></div>
-            <br>
+               <script>
+                  displayName();
+               </script>
+               <br />
+            </div>
+            <br />
             <b>Score: </b>
             <div id="score">
-                <script>displayScore()</script>
+               <script>
+                  displayScore();
+               </script>
             </div>
             <h3 class="score"></h3>
-        </div>
-    </div>
-</body>
-
+         </div>
+      </div>
+   </body>
 </html>
