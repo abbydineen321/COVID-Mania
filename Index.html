@@ -1,46 +1,43 @@
 <!DOCTYPE html>
 <html>
+    <head>
+        <title>COVID - Mania!</title>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
-    <title>COVID - Mania!</title>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="js/covid.js"></script>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="js/covid.js"></script>
+        <link rel="stylesheet" href="style/covid.css" />
+    </head>
 
+    <body class="day">
+        <link href="Covid-Mania.css" rel="stylesheet" />
+        <h2 class="title">COVID - Mania!</h2>
+        <div class="game">
+            <div class="welcome-section">
+                <p>
+                    Hi There! Welcome to COVID – Mania! My name is Vrans, I am an alien from outer space. Today, I want you to help me learn about
+                    COVID-19!
+                </p>
+                <div>
+                    <form>
+                        <p>Tell me your name:</p>
+                        <input type="text" name="name" id="name" placeholder="Type your name here!" />
+                        <button type="button" onclick="nameEntered()">Enter</button>
+                    </form>
+                </div>
+                <div class="cartoon">
+                    <img src="assets/sprite.PNG" alt="Vrans the Alien" style="width: 100px; height: 100px" />
+                    <br />
+                    <p>Hover over me - I dance!</p>
+                </div>
 
-    <link rel="stylesheet" href="style/covid.css" />
-</head>
-
-<body class="day">
-    <link href="Covid-Mania.css" rel="stylesheet" />
-    <h2 class="title">COVID - Mania!</h2>
-    <div class="game">
-        <div class="welcome-section">
-            <p>
-                Hi There! Welcome to COVID – Mania! My name is Vrans, I am an alien from outer space. Today, I want you
-                to help me learn about
-                COVID-19!
-            </p>
-            <div>
-                <form>
-                    <p>Tell me your name:</p>
-                    <input type="text" name="name" id="name" placeholder="Type your name here!" />
-                    <button class="ping" type="button" onclick="nameEntered()">Enter</button>
-                </form>
+                <p id="welcome"></p>
+                <a id="nxt-btn" class="hidden" href="Activity1.html" style="float: right"
+                    ><button class="ping" type="button">Go to activity 1</button></a
+                >
             </div>
-            <div class="cartoon">
-                <img src="assets/sprite.PNG" alt="Vrans the Alien" style="width: 100px; height: 100px" />
-                <br />
-                <p>Hover over me - I dance!</p>
-            </div>
-
-            <p id="welcome"></p>
-            <a id="nxt-btn" class="hidden" href="Activity1.html" style="float: right"><button class="ping"
-                    type="button">Go to activity 1</button></a>
         </div>
-    </div>
-</body>
-
+    </body>
 </html>
