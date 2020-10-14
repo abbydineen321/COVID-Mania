@@ -72,6 +72,13 @@ $(document).ready(function () {
       }
    });
 
+   // Activity 4 choices
+   $(".a4-option1").click(function () {});
+   $(".a4-option2").click(function () {
+      ping();
+   });
+   $(".a4-option3").click(function () {});
+
    // Activity 6 button event
    $(".submit-btn6").on("click", function () {
       var input = $("#answer").val();
