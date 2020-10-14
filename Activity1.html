@@ -9,7 +9,6 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="js/covid.js"></script>
 
-        <script src="includes/functions.php"></script>
         <link rel="stylesheet" href="style/covid.css"/>
 
     </head>
@@ -21,9 +20,7 @@
                     Meet Margaret. She wants to leave the house, but in Melbourne, there is stage 4 restrictions. What are the FOUR reasons you can
                     leave the house? Type your answer below:
                 </p>
-                <p>
-                    <script>getName()</script>
-                </p>
+                
                 <ul>
                     <li class="answer1">Groceries</li>
                     <li class="answer2">Walk</li>
@@ -39,6 +36,7 @@
                 </p>
             </div>
             <div class="info-section">
+                <span id="name"><script>displayName()</script></span>
                 <h3 class="score"></h3>
             </div>
         </div>

@@ -88,33 +88,19 @@ $(document).ready(function () {
  
 function nameEntered() {
     var userName = document.getElementById("name").value;
-    getName(userName);
     var message = document.getElementById("welcome");
+    
     if (userName != null) {
+        localStorage.setItem("user", userName);
         message.innerHTML = "Hello " + userName + "! Hope you are having a great day! Let's go onto the next activity!";
         document.getElementById("nxt-btn").className = "show";
         document.getElementById();
     }
-    return userName;
-}
-
-function getName(userName) {
     
-    return userName;
 }
 
 function displayName() {
-    var name = getName(); 
-    //score;
-
-    // calling JSON object and finding the name of player and its score
-    $(data.players).each(function (index, value) {
-        name = value.name;
-        score = value.score;
-    });
-
-    // prep the values
-    info = "Name: " + name + "<br>Score: " + score;
-
-    $(".score").append(info);
+    document.getElementById("name").innerHTML = localStorage.getItem("user");
+    message.innerHTML = ""+ user;
 }
+
