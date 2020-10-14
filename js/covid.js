@@ -1,16 +1,20 @@
 $(document).ready(function () {
 
-    //index page name button
-    $(".submit-btnIndex").click(function () {
-        var input = tempName;
 
-    });
 
     // Activity 1 button event
+    addScore = 10
     $(".submit-btn1").click(function () {
-        var input = $("#answer").val();
-        var answers = validate(input, answer);
-        var answerType;
+        document.getElementById("answer").innerHTML = answer;
+        if (answer != null && (answer == 'groceries' || answer == 'walk' || answer == 'work' || answer == 'doctors')) {
+            localStorage.getItem("userScore") += addScore;
+            ping();
+            displayScore();
+        } else {
+            if (answer != null) {
+                addScore = addScore - 1;
+            }
+        }
     });
 
     // Activity 2 button event
@@ -91,7 +95,7 @@ function displayName() {
 
 function displayScore() {
     document.getElementById("score").innerHTML = localStorage.getItem("userScore");
-    message.innerHTML = "" + userScore;
+    score.innerHTML = "" + userScore;
 }
 
 
