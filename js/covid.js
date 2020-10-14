@@ -1,24 +1,26 @@
 $(document).ready(function () {
-
-
+    var userScore = localStorage.getItem("userScore");
+    var userName = localStorage.getItem("user");
+    var addScore = 10;
 
     // Activity 1 button event
-    addScore = 10
+
     $(".submit-btn1").click(function () {
-        document.getElementById("answer").innerHTML = answer;
-        if (answer != null && (answer == 'groceries' || answer == 'walk' || answer == 'work' || answer == 'doctors')) {
-            localStorage.getItem("userScore") += addScore;
+        ans = document.getElementById("answer").innerHTML;
+        anser = asn.toLowerCase();
+        if (answer != null && (answer == "groceries" || answer == "walk" || answer == "work" || answer == "doctors")) {
+            userScore += addScore;
             ping();
             displayScore();
         } else {
             if (answer != null) {
-                addScore = addScore - 1;
+                addScore--;
             }
         }
     });
 
     // Activity 2 button event
-    $(".submit-btn2").click(function () { });
+    $(".submit-btn2").click(function () {});
 
     // Activity 6 button event
     $(".submit-btn6").on("click", function () {
@@ -34,18 +36,20 @@ $(document).ready(function () {
         }
     });
 
-    $(".ping").click(function () {
-        ping();
-    });
+    // I think we can just remove this function because we can just call ping();
+    //for each correct answers rather than assigning it to all buttons class
+    // $(".ping").click(function () {
+    //     ping();
+    // });
 
-    // funcitons based on javascript
+    // functions based on javascript
     function ping() {
         var ping = new Audio();
         ping.src = "audio/ping.mp3";
         ping.play();
     }
 
-    function validate(text, answer) { }
+    function validate(text, answer) {}
 
     function booleanText(text) {
         if (text == "yes") {
@@ -77,15 +81,15 @@ function nameEntered() {
     var userName = document.getElementById("name").value;
     var message = document.getElementById("welcome");
 
-    if (userName != null) {
+    if (userName != "") {
         score = 0;
         localStorage.setItem("user", userName);
         localStorage.setItem("userScore", String(score));
         message.innerHTML = "Hello " + userName + "! Hope you are having a great day! Let's go onto the next activity!";
         document.getElementById("nxt-btn").className = "show";
-        document.getElementById();
+    } else {
+        alert("Enter your name");
     }
-
 }
 
 function displayName() {
@@ -97,5 +101,3 @@ function displayScore() {
     document.getElementById("score").innerHTML = localStorage.getItem("userScore");
     score.innerHTML = "" + userScore;
 }
-
-
