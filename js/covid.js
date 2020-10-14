@@ -10,8 +10,11 @@ $(document).ready(function () {
       if (answer != null && (answer == "groceries" || answer == "walk" || answer == "work" || answer == "doctors")) {
          userScore = Number(userScore) + addScore;
          sessionStorage.setItem("userScore", userScore);
+         userScore = 10;
          ping();
-         location.replace("./Activity2.html");
+         setTimeout(function () {
+            location.replace("./Activity2.html");
+         }, 1500);
       } else {
          if (answer != null && addScore > 6) {
             addScore--;
@@ -27,14 +30,44 @@ $(document).ready(function () {
       if (answer != null && answer == 7) {
          userScore = Number(userScore) + addScore;
          sessionStorage.setItem("userScore", userScore);
+         userScore = 10;
          ping();
-         location.replace("./Activity3.html");
+         setTimeout(function () {
+            location.replace("./Activity3.html");
+         }, 1500);
       } else {
          if (answer != null && addScore > 6) {
             addScore--;
             input.value = "";
+            input.placeholder = "You got it wrong try again!";
          } else {
             input.value = "";
+            input.placeholder = "You got it wrong try again!";
+         }
+      }
+   });
+
+   // Activity 3 button event
+   $(".submit-btn3").click(function () {
+      var userScore = sessionStorage.getItem("userScore");
+      input = document.getElementById("answer");
+      answer = Number(input.value);
+      if (answer != null && answer == 20) {
+         userScore = Number(userScore) + addScore;
+         sessionStorage.setItem("userScore", userScore);
+         userScore = 10;
+         ping();
+         setTimeout(function () {
+            location.replace("./Activity4.html");
+         }, 1500);
+      } else {
+         if (answer != null && addScore > 6) {
+            addScore--;
+            input.value = "";
+            input.placeholder = "You got it wrong try again!";
+         } else {
+            input.value = "";
+            input.placeholder = "You got it wrong try again!";
          }
       }
    });

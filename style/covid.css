@@ -2,6 +2,7 @@
    margin: 0;
    padding: 0;
    box-sizing: border-box;
+   font-family: "Comic Sans MS", cursive, sans-serif;
 }
 
 body {
@@ -12,21 +13,21 @@ body {
 }
 
 /* Background image */
-body.day {
+.bg-day {
    background-image: url("../assets/daybg.JPG");
    background-size: cover;
    background-repeat: no-repeat;
    background-attachment: fixed;
 }
 
-body.store {
+.bg-store {
    background-image: url("../assets/storebg.JPG");
    background-size: cover;
    background-repeat: no-repeat;
    background-attachment: fixed;
 }
 
-body.night {
+.bg-night {
    background-image: url("../assets/nightbg.JPG");
    background-size: cover;
    background-repeat: no-repeat;
@@ -119,6 +120,17 @@ button {
 
 button:hover {
    background-color: rgb(253, 198, 95);
+}
+
+.selection {
+   padding: 10px 20px;
+   font-size: larger;
+   font-weight: 500;
+}
+
+.options {
+   margin-top: 2rem;
+   margin-bottom: 2rem;
 }
 
 .hidden {
