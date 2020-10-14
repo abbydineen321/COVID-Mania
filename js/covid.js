@@ -2,13 +2,13 @@ $(document).ready(function () {
    var addScore = 10;
 
    // Activity 1 button event
-
    $(".submit-btn1").click(function () {
       var userScore = localStorage.getItem("userScore");
       ans = document.getElementById("answer").value;
       anser = asn.toLowerCase();
       if (answer != null && (answer == "groceries" || answer == "walk" || answer == "work" || answer == "doctors")) {
          userScore += addScore;
+         localStorage.setItem("userScore", userScore);
          ping();
          displayScore();
       } else {

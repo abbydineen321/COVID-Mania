@@ -15,10 +15,8 @@ function nameEntered() {
 
 function displayName() {
    document.getElementById("name").innerHTML = localStorage.getItem("user");
-   name.innerHTML = "" + user;
 }
 
 function displayScore() {
    document.getElementById("score").innerHTML = localStorage.getItem("userScore");
-   score.innerHTML = "" + userScore;
 }
