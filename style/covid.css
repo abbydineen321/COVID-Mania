@@ -1,175 +1,173 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    text-align: center;
-    margin: auto;
-    font-family: "Comic Sans MS", cursive, sans-serif;
-    color: black;
+  text-align: center;
+  margin: auto;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  color: black;
 }
 
 /* Background image */
 body.day {
-    background-image: url("../assets/daybg.JPG");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+  background-image: url("../assets/daybg.JPG");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 body.store {
-    background-image: url("../assets/storebg.JPG");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+  background-image: url("../assets/storebg.JPG");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 body.night {
-    background-image: url("../assets/nightbg.JPG");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    
+  background-image: url("../assets/nightbg.JPG");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 /* content */
 
 h2 {
-    text-align: center;
-    font-style: italic;
-    text-decoration: inherit;
-    text-shadow: 2.5px 2.5px black;
-    font-size: 50px;
+  text-align: center;
+  font-style: italic;
+  text-decoration: inherit;
+  text-shadow: 2.5px 2.5px black;
+  font-size: 50px;
 }
 
 .title {
-    margin-top: 1vh;
-    margin-bottom: 3vh;
+  margin-top: 1vh;
+  margin-bottom: 3vh;
 }
 
 body.fade-out {
-    opacity: 0;
-    transition: none;
+  opacity: 0;
+  transition: none;
 }
 
 .cartoon {
-    margin: 100px;
+  margin: 100px;
 }
 
 input {
-    text-align: center;
-    font-size: large;
-    padding: 20px;
-    border: none;
-    background: none;
-    border-bottom: black 2px solid;
-    width: fit-content;
-    height: fit-content;
+  text-align: center;
+  font-size: large;
+  padding: 20px;
+  border: none;
+  background: none;
+  border-bottom: black 2px solid;
+  width: fit-content;
+  height: fit-content;
 }
 .game {
-    margin-top: 100px;
-    display: flex;
-    justify-content: space-between;
-    height: 50%;
+  margin-top: 100px;
+  display: flex;
+  justify-content: space-between;
+  height: 50%;
 }
 
 .welcome-section {
-    background-color: aliceblue;
-    width: 40%;
-    height: fit-content;
-    padding: 20px;
-    border-radius: 10px;
-    margin-left: auto;
-    margin-right: auto;
+  background-color: aliceblue;
+  width: 40%;
+  height: fit-content;
+  padding: 20px;
+  border-radius: 10px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .game-section {
-    background-color: aliceblue;
-    width: 40%;
-    height: fit-content;
-    padding: 20px;
-    border-radius: 10px;
-    margin-left: auto;
-    margin-right: 10%;
+  background-color: aliceblue;
+  width: 40%;
+  height: fit-content;
+  padding: 20px;
+  border-radius: 10px;
+  margin-left: auto;
+  margin-right: 10%;
 }
 
 .info-section {
-    display: flex;
-    background-color: aliceblue;
-    width: 20%;
-    height: 50%;
-    padding: 20px;
-    border-radius: 10px;
-    margin-right: auto;
+  background-color: aliceblue;
+  width: 20%;
+  height: 50%;
+  padding: 20px;
+  border-radius: 10px;
+  margin-right: auto;
 }
 button {
-    padding: 5px 10px 5px;
-    background-color: orange;
-    color: black;
-    border-radius: 5px;
+  padding: 5px 10px 5px;
+  background-color: orange;
+  color: black;
+  border-radius: 5px;
 }
 
 .hidden {
-    display: none;
+  display: none;
 }
 
 .show {
-    display: block;
+  display: block;
 }
 
 .main {
-    margin: auto;
-    margin-bottom: 30%;
-    height: 600px;
-    text-align: center;
-    width: 60%;
+  margin: auto;
+  margin-bottom: 30%;
+  height: 600px;
+  text-align: center;
+  width: 60%;
 
-    padding: 5%;
-    overflow: hidden;
+  padding: 5%;
+  overflow: hidden;
 }
 
 /* animation */
 img:hover {
-    /* Start the shake animation and make the animation last for 0.5 seconds */
-    animation: shake 0.8s;
+  /* Start the shake animation and make the animation last for 0.5 seconds */
+  animation: shake 0.8s;
 
-    /* When the animation is finished, start again */
-    animation-iteration-count: infinite;
+  /* When the animation is finished, start again */
+  animation-iteration-count: infinite;
 }
 
 @keyframes shake {
-    0% {
-        transform: translate(1px, 1px) rotate(0deg);
-    }
-    10% {
-        transform: translate(-1px, -2px) rotate(-1deg);
-    }
-    20% {
-        transform: translate(-3px, 0px) rotate(1deg);
-    }
-    30% {
-        transform: translate(3px, 2px) rotate(0deg);
-    }
-    40% {
-        transform: translate(1px, -1px) rotate(1deg);
-    }
-    50% {
-        transform: translate(-1px, 2px) rotate(-1deg);
-    }
-    60% {
-        transform: translate(-3px, 1px) rotate(0deg);
-    }
-    70% {
-        transform: translate(3px, 1px) rotate(-1deg);
-    }
-    80% {
-        transform: translate(-1px, -1px) rotate(1deg);
-    }
-    90% {
-        transform: translate(1px, 2px) rotate(0deg);
-    }
-    100% {
-        transform: translate(1px, -2px) rotate(-1deg);
-    }
+  0% {
+    transform: translate(1px, 1px) rotate(0deg);
+  }
+  10% {
+    transform: translate(-1px, -2px) rotate(-1deg);
+  }
+  20% {
+    transform: translate(-3px, 0px) rotate(1deg);
+  }
+  30% {
+    transform: translate(3px, 2px) rotate(0deg);
+  }
+  40% {
+    transform: translate(1px, -1px) rotate(1deg);
+  }
+  50% {
+    transform: translate(-1px, 2px) rotate(-1deg);
+  }
+  60% {
+    transform: translate(-3px, 1px) rotate(0deg);
+  }
+  70% {
+    transform: translate(3px, 1px) rotate(-1deg);
+  }
+  80% {
+    transform: translate(-1px, -1px) rotate(1deg);
+  }
+  90% {
+    transform: translate(1px, 2px) rotate(0deg);
+  }
+  100% {
+    transform: translate(1px, -2px) rotate(-1deg);
+  }
 }

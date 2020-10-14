@@ -91,16 +91,24 @@ function nameEntered() {
     var message = document.getElementById("welcome");
 
     if (userName != null) {
+        score = 0;
         localStorage.setItem("user", userName);
+        localStorage.setItem("userScore", String(score));
         message.innerHTML = "Hello " + userName + "! Hope you are having a great day! Let's go onto the next activity!";
         document.getElementById("nxt-btn").className = "show";
         document.getElementById();
     }
-    
+
 }
 
 function displayName() {
     document.getElementById("name").innerHTML = localStorage.getItem("user");
-    message.innerHTML = ""+ user;
+    name.innerHTML = "" + user;
 }
+
+function displayScore() {
+    document.getElementById("score").innerHTML = localStorage.getItem("userScore");
+    message.innerHTML = "" + userScore;
+}
+
 
