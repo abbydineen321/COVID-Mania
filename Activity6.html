@@ -1,49 +1,49 @@
 <!DOCTYPE html>
 <html>
+   <head>
+      <title>COVID - Mania: Activity 6</title>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <script src="js/covid.js"></script>
+      <script src="js/functions.js"></script>
+      <link rel="stylesheet" href="style/covid.css" />
+   </head>
 
-<head>
-  <title>COVID - Mania: Activity 6</title>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="js/covid.js"></script>
-  <script src="js/functions.js"></script>
-  <link rel="stylesheet" href="style/covid.css" />
-</head>
+   <body class="store">
+      <h2>COVID - Mania!</h2>
 
-<body class="store">
+      <img src="assets/gameboy.PNG" alt="gameboy" style="width: 100px; height: 100px" />
+      <img src="assets/plushie.PNG" alt="plushie" style="width: 100px; height: 100px" />
+      <img src="assets/rubikscube.PNG" alt="rubiks" style="width: 100px; height: 100px" />
+      <div class="game">
+         <div class="game-section">
+            <p>
+               Blake wants to go to the toy shop near his house. When he asks his Mum, she says it is 6 kilometres away. Are they allowed to go to the
+               toy shop? Type yes or no below:
+            </p>
 
-  <h2>COVID - Mania!</h2>
+            <input type="text" name="answer" id="answer" />
+            <button class="submit-btn6">Submit</button>
 
-  <img src="assets/gameboy.PNG" alt="gameboy" style="width: 100px; height: 100px" />
-  <img src="assets/plushie.PNG" alt="plushie" style="width: 100px; height: 100px" />
-  <img src="assets/rubikscube.PNG" alt="rubiks" style="width: 100px; height: 100px" />
-  <div class="game">
-    <div class="game-section">
+            <p class="feedback"></p>
 
-      <p>
-        Blake wants to go to the toy shop near his house. When he asks his Mum,
-        she says it is 6 kilometres away. Are they allowed to go to the toy
-        shop? Type yes or no below:
-      </p>
-
-      <input type="text" name="answer" id="answer" />
-      <button class="submit-btn6">Submit</button>
-
-      <p class="feedback"></p>
-
-      <p>
-        <br>
-        <a href="Activity7.html"><button type="button">Go to Activity 7</button></a>
-        <a href="Activity5.html"><button type="button">Return to Activity 5</button></a>
-        <a href="Index.html"><button type="button">Return to Home Screen</button></a>
-      </p>
-    </div>
-    <div class="info-section">
-      <b>Name: </b><span id="name"><script>displayName()</script></span>
-      <h3 class="score"></h3>
-  </div>
-  </div>
-  </div>
-
+            <p>
+               <br />
+               <a href="Activity7.html"><button type="button">Go to Activity 7</button></a>
+               <a href="Activity5.html"><button type="button">Return to Activity 5</button></a>
+               <a href="Index.html"><button type="button">Return to Home Screen</button></a>
+            </p>
+         </div>
+         <div class="info-section">
+            <b>Name: </b
+            ><span id="name"
+               ><script>
+                  displayName();
+               </script></span
+            >
+            <h3 class="score"></h3>
+         </div>
+      </div>
+   </body>
 </html>
