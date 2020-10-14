@@ -1,22 +1,5 @@
 $(document).ready(function () {
 
-    
-
-    // $.getJSON("data/player.json", function (data) {
-    //     var name, score;
-
-    //     // calling JSON object and finding the name of player and its score
-    //     $(data.players).each(function (index, value) {
-    //         name = value.name;
-    //         score = value.score;
-    //     });
-
-    //     // prep the values
-    //     info = "Name: " + name + "<br>Score: " + score;
-
-    //     $(".score").append(info);
-    // });
-
     //index page name button
     $(".submit-btnIndex").click(function () {
         var input = tempName;
@@ -85,7 +68,7 @@ $(document).ready(function () {
         $("body").removeClass("fade-out");
     });
 });
- 
+
 function nameEntered() {
     var userName = document.getElementById("name").value;
     var message = document.getElementById("welcome");
