@@ -3,12 +3,12 @@ $(document).ready(function () {
 
    // Activity 1 button event
    $(".submit-btn1").click(function () {
-      var userScore = localStorage.getItem("userScore");
+      var userScore = sessionStorage.getItem("userScore");
       ans = document.getElementById("answer").value;
-      anser = asn.toLowerCase();
+      answer = asn.toLowerCase();
       if (answer != null && (answer == "groceries" || answer == "walk" || answer == "work" || answer == "doctors")) {
          userScore += addScore;
-         localStorage.setItem("userScore", userScore);
+         sessionStorage.setItem("userScore", userScore);
          ping();
          displayScore();
       } else {

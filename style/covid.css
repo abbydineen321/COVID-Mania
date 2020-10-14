@@ -81,7 +81,7 @@ input {
 
 .welcome-section {
    background-color: aliceblue;
-   width: 50%;
+   width: fit-content;
    height: fit-content;
    padding: 20px;
    border-radius: 10px;
@@ -107,11 +107,18 @@ input {
    border-radius: 10px;
    margin-right: auto;
 }
+
 button {
    padding: 5px 10px 5px;
    background-color: orange;
    color: black;
+   border: 5px solid white;
    border-radius: 5px;
+   cursor: pointer;
+}
+
+button:hover {
+   background-color: rgb(253, 198, 95);
 }
 
 .hidden {
