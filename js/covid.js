@@ -3,14 +3,12 @@ $(document).ready(function () {
 
    // Activity 1 button event
    $(".submit-btn1").click(function () {
-      var userScore = sessionStorage.getItem("userScore");
       ans = document.getElementById("answer").value;
       console.log(ans + addScore);
       answer = String(ans).toLowerCase();
       if (answer != null && (answer == "groceries" || answer == "walk" || answer == "work" || answer == "doctors")) {
-         userScore = Number(userScore) + addScore;
-         sessionStorage.setItem("userScore", userScore);
-         userScore = 10;
+         addToScore(addScore);
+         addScore = 10;
          ping();
          setTimeout(function () {
             location.replace("./Activity2.html");
@@ -24,13 +22,11 @@ $(document).ready(function () {
 
    // Activity 2 button event
    $(".submit-btn2").click(function () {
-      var userScore = sessionStorage.getItem("userScore");
       input = document.getElementById("answer");
       answer = Number(input.value);
       if (answer != null && answer == 7) {
-         userScore = Number(userScore) + addScore;
-         sessionStorage.setItem("userScore", userScore);
-         userScore = 10;
+         addToScore(addScore);
+         addScore = 10;
          ping();
          setTimeout(function () {
             location.replace("./Activity3.html");
@@ -49,12 +45,10 @@ $(document).ready(function () {
 
    // Activity 3 button event
    $(".submit-btn3").click(function () {
-      var userScore = sessionStorage.getItem("userScore");
       input = document.getElementById("answer");
       answer = Number(input.value);
       if (answer != null && answer == 20) {
-         userScore = Number(userScore) + addScore;
-         sessionStorage.setItem("userScore", userScore);
+         addToScore(addScore);
          userScore = 10;
          ping();
          setTimeout(function () {
@@ -73,11 +67,48 @@ $(document).ready(function () {
    });
 
    // Activity 4 choices
-   $(".a4-option1").click(function () {});
+   $(".a4-option1").click(function () {
+      if (addScore > 6) {
+         addScore--;
+      }
+      $(".response").html("Hey! We need to keep distance with our friends because of the bad virus out there");
+   });
    $(".a4-option2").click(function () {
       ping();
+      addToScore(addScore);
+      addScore = 10;
+      $(".response").html("That's right we waving is the best way to say hi in this situation");
+      setTimeout(() => {
+         location.replace("./Activity5.html");
+      }, 3000);
    });
-   $(".a4-option3").click(function () {});
+   $(".a4-option3").click(function () {
+      if (addScore > 6) {
+         addScore--;
+      }
+      $(".response").html("Don't ignore you friend at least say high but not high five!");
+   });
+
+   // Activity 5 button event
+   $(".submit-btn5").on("click", function () {
+      var input = $("#answer").val();
+      var checks = booleanText(input);
+      if (checks == false) {
+         $(".feedback").html("You are wrong!!");
+         if (addScore > 6) {
+            addScore -= 2;
+         }
+      } else if (checks == true) {
+         $(".feedback").html("You are correct!!");
+         addToScore(addScore);
+         ping();
+         setTimeout(() => {
+            location.replace("./Activity6.html");
+         }, 2000);
+      } else {
+         $(".feedback").html("Tell me yes or no only!");
+      }
+   });
 
    // Activity 6 button event
    $(".submit-btn6").on("click", function () {
@@ -85,19 +116,39 @@ $(document).ready(function () {
       var checks = booleanText(input);
       if (checks == true) {
          $(".feedback").html("You are wrong!!");
+         if (addScore > 6) {
+            addScore -= 2;
+         }
       } else if (checks == false) {
          $(".feedback").html("You are correct!!");
+         addToScore(addScore);
          ping();
+         setTimeout(() => {
+            location.replace("./Activity7.html");
+         }, 2000);
       } else {
          $(".feedback").html("Tell me yes or no only!");
       }
    });
 
-   // I think we can just remove this function because we can just call ping();
-   //for each correct answers rather than assigning it to all buttons class
-   // $(".ping").click(function () {
-   //     ping();
-   // });
+   // Activity 7 button event
+   $(".submit-btn7").click(function () {
+      ans = document.getElementById("answer").value;
+      console.log(ans + addScore);
+      answer = String(ans).toLowerCase();
+      if (answer != null && answer == "curfew") {
+         addToScore(addScore);
+         addScore = 10;
+         ping();
+         setTimeout(function () {
+            location.replace("./Activity2.html");
+         }, 1500);
+      } else {
+         if (answer != null && addScore > 6) {
+            addScore--;
+         }
+      }
+   });
 
    // functions based on javascript
    function ping() {
@@ -105,8 +156,6 @@ $(document).ready(function () {
       ping.src = "audio/ping.mp3";
       ping.play();
    }
-
-   function validate(text, answer) {}
 
    function booleanText(text) {
       if (text == "yes") {
@@ -118,15 +167,10 @@ $(document).ready(function () {
       }
    }
 
-   function spellcheck(txt, answer) {
-      textArray = txt.split("");
-      answerArray = answer.split("");
-      textArray.forEach(i => {
-         if (textArray[i] != answerArray[i]) {
-            return false;
-         }
-      });
-      return true;
+   function addToScore(score) {
+      var userScore = sessionStorage.getItem("userScore");
+      userScore = Number(userScore) + score;
+      sessionStorage.setItem("userScore", userScore);
    }
 
    $(function () {
