@@ -1,22 +1,20 @@
 <!DOCTYPE html>
 <html>
+   <head>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <script src="js/covid.js"></script>
+      <link rel="stylesheet" href="style/covid.css" />
+      <script src="js/functions.js"></script>
+      <title>COVID - Mania: Activity 2</title>
+   </head>
 
-<head>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="js/covid.js"></script>
-    <link rel="stylesheet" href="style/covid.css" />
-    <script src="includes/functions.php"></script>
-    <title>COVID - Mania: Activity 2</title>
-</head>
-
-<body class="day">
-    <h2>COVID - Mania!</h2>
-    <div class="game">
-        <div class="game-section">
+   <body class="day">
+      <h2>COVID - Mania!</h2>
+      <div class="game">
+         <div class="game-section">
             <p>
-                If you are 12 years old or over, you have to wear a mask when you leave your house. Can you count how
-                many masks are on the
-                screen? Type your answer below:
+               If you are 12 years old or over, you have to wear a mask when you leave your house. Can you count how many masks are on the screen?
+               Type your answer below:
             </p>
             <img src="assets/mask.png" alt="Mask" width="100px," height="100px" top="53px," left="205px" />
             <img src="assets/mask.png" alt="Mask" width="100px," height="100px" top="80px," left="50px" />
@@ -28,17 +26,21 @@
 
             <button onclick="submit()">submit</button>
             <p>
-                <br>
-                <a href="Activity3.html"><button type="button">Go to activity 3</button></a>
-                <a href="Activity1.html"><button type="button">Return to Activity 1</button></a>
-                <a href="Index.html"><button type="button">Return to Home Screen</button></a>
+               <br />
+               <a href="Activity3.html"><button type="button">Go to activity 3</button></a>
+               <a href="Activity1.html"><button type="button">Return to Activity 1</button></a>
+               <a href="Index.html"><button type="button">Return to Home Screen</button></a>
             </p>
-        </div>
-        <div class="info-section">
-            <b>Name: </b><span id="name"><script>displayName()</script></span>
+         </div>
+         <div class="info-section">
+            <b>Name: </b
+            ><span id="name"
+               ><script>
+                  displayName();
+               </script></span
+            >
             <h3 class="score"></h3>
-        </div>
-    </div>
-</body>
-
+         </div>
+      </div>
+   </body>
 </html>
