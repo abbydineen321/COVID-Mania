@@ -5,21 +5,39 @@ $(document).ready(function () {
    $(".submit-btn1").click(function () {
       var userScore = sessionStorage.getItem("userScore");
       ans = document.getElementById("answer").value;
-      answer = asn.toLowerCase();
+      console.log(ans + addScore);
+      answer = String(ans).toLowerCase();
       if (answer != null && (answer == "groceries" || answer == "walk" || answer == "work" || answer == "doctors")) {
-         userScore += addScore;
+         userScore = Number(userScore) + addScore;
          sessionStorage.setItem("userScore", userScore);
          ping();
-         displayScore();
+         location.replace("./Activity2.html");
       } else {
-         if (answer != null) {
+         if (answer != null && addScore > 6) {
             addScore--;
          }
       }
    });
 
    // Activity 2 button event
-   $(".submit-btn2").click(function () {});
+   $(".submit-btn2").click(function () {
+      var userScore = sessionStorage.getItem("userScore");
+      input = document.getElementById("answer");
+      answer = Number(input.value);
+      if (answer != null && answer == 7) {
+         userScore = Number(userScore) + addScore;
+         sessionStorage.setItem("userScore", userScore);
+         ping();
+         location.replace("./Activity3.html");
+      } else {
+         if (answer != null && addScore > 6) {
+            addScore--;
+            input.value = "";
+         } else {
+            input.value = "";
+         }
+      }
+   });
 
    // Activity 6 button event
    $(".submit-btn6").on("click", function () {
