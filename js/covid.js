@@ -109,6 +109,16 @@ $(document).ready(function () {
          $(".feedback").html("Tell me yes or no only!");
       }
    });
+   $(".subtract").click(function () {
+      value = $(".answer").val();
+      if (value > 0) value--;
+      $(".answer").val(value);
+   });
+   $(".add").click(function () {
+      value = $(".answer").val();
+      if (value < 20) value++;
+      $(".answer").val(value);
+   });
 
    // Activity 6 button event
    $(".submit-btn6").on("click", function () {
