@@ -6,7 +6,7 @@ $(document).ready(function () {
       ans = document.getElementById("answer").value;
       console.log(ans + addScore);
       answer = String(ans).toLowerCase();
-      if (answer != null && (answer == "groceries" || answer == "walk" || answer == "work" || answer == "doctors")) {
+      if (answer != null && (answer == "groceries" || answer == "walk" || answer == "work" || answer == "doctor")) {
          addToScore(addScore);
          addScore = 10;
          ping();
