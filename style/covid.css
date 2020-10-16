@@ -79,6 +79,7 @@ input {
 }
 .add,
 .subtract {
+   font-size: large;
 }
 .game {
    margin-top: 100px;
