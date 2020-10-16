@@ -73,6 +73,13 @@ input {
    width: fit-content;
    height: fit-content;
 }
+
+.number {
+   width: 100px;
+}
+.add,
+.subtract {
+}
 .game {
    margin-top: 100px;
    display: flex;
@@ -107,6 +114,11 @@ input {
    padding: 20px;
    border-radius: 10px;
    margin-right: auto;
+}
+
+.img-container {
+   margin-top: 50px;
+   margin-bottom: 50px;
 }
 
 button {
