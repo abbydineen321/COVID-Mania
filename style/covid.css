@@ -43,10 +43,10 @@ h5,
 h6,
 strong {
   text-align: center;
-  font-style: italic;
   text-decoration: inherit;
-  text-shadow: 2.5px 2.5px black;
+  font-style: italic;
   font-size: 50px;
+  color: black;
 }
 
 .title {
@@ -79,7 +79,7 @@ input {
 }
 .add,
 .subtract {
-   font-size: large;
+  font-size: large;
 }
 .game {
   margin-top: 20px;

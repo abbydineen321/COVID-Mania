@@ -151,7 +151,7 @@ $(document).ready(function () {
          addScore = 10;
          ping();
          setTimeout(function () {
-            location.replace("./Activity2.html");
+            location.replace("./finish.html");
          }, 1500);
       } else {
          if (answer != null && addScore > 6) {
